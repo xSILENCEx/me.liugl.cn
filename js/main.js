@@ -1,4 +1,5 @@
 let nowSeason = 2;
+let isMenuOpen = false;
 
 window.onload = function (e) {
     if (checkCookie("season")) {
@@ -152,3 +153,29 @@ function goTo(s) {
         console.log(e);
     }
 }
+
+///////手势判断
+let startPoint = null;
+document.addEventListener("touchstart", function (e) {
+    var e = e || window.event;
+    startPoint = e.touches[0];
+});
+document.addEventListener("touchmove", function (e) {
+    var e = e || window.event;
+    let endPoint = e.changedTouches[0];
+    let x = endPoint.clientX - startPoint.clientX;
+    let y = endPoint.clientY - startPoint.clientY;
+
+    let d = 80;
+    if (Math.abs(x) > d) {
+        if (x > 0) {
+            closeMenu();
+            var e = e || window.event;
+            startPoint = e.touches[0];
+        } else {
+            openMenu();
+            var e = e || window.event;
+            startPoint = e.touches[0];
+        }
+    }
+});
