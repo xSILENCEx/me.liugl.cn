@@ -56,6 +56,7 @@ function changeSeason(season) {
     setCookie("season", season, 100);
     nowSeason = season;
     changeContent(nowSeason);
+    closeMenu();
 }
 
 function changeContent(season) {
@@ -134,4 +135,20 @@ function closeMenu() {
     document.getElementById("menu").style.transform = "translateX(0px)";
     document.getElementById("nav").style.transform = "translateX(0px)";
     document.getElementById("centerBody").style.transform = "translateX(0px)";
+}
+
+// 滚动到指定id
+function goTo(s) {
+    try {
+        closeMenu();
+        setTimeout(function (e) {
+            document.getElementById(s).scrollIntoView({
+                block: "start",
+                behavior: "smooth"
+            });
+        }, 500);
+
+    } catch (e) {
+        console.log(e);
+    }
 }

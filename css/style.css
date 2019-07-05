@@ -5,6 +5,33 @@
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.80);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.80);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+a:active {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+a:checked {
+    color: rgba(255, 255, 255, 0.80);
+}
+
 .def {
     margin: 0;
     padding: 0;
@@ -572,6 +599,24 @@ li {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.80);
     line-height: 200%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.season-btn {
+    float: left;
+    text-align: center;
+    width: 105px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 1.00);
+    font-size: 80%;
+    color: rgba(255, 255, 255, 1.00);
+    line-height: 30px;
+    border-radius: 5px;
+    margin: 20px 0 0 30px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;

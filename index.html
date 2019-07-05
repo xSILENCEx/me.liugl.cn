@@ -18,24 +18,30 @@
     <section id="menu">
         <div class="menu-title">导航菜单</div>
         <ul class="menu-item">
-            <li>回到顶部</li>
-            <li>教育背景</li>
-            <li>专业技能</li>
-            <li>实践荣誉</li>
-            <li>自我评价</li>
-            <li>部分作品</li>
+            <li onclick="goTo('s1')">回到顶部</li>
+            <li onclick="goTo('s2')">教育背景</li>
+            <li onclick="goTo('s3')">专业技能</li>
+            <li onclick="goTo('s4')">实践荣誉</li>
+            <li onclick="goTo('s5')">自我评价</li>
+            <li onclick="goTo('s6')">部分作品</li>
         </ul>
-        <p style="color:rgba(255,255,255,0.70);font-size: 14px;margin-top: 40px;padding: 0 30px 0 30px">
-            正因为一朵看不见的花，星星是美丽的。 <p
-                style="width:100%;text-align:end;color:rgba(255,255,255,0.60);font-size: 14px;padding: 0 30px 0 30px">—
-                — 埃克苏佩里 《小王子》 </p>
-        </p>
+        <p style="color:rgba(255,255,255,0.70);font-size: 90%;margin-top: 40px;padding: 0 30px 0 30px">
+            正因为一朵看不见的花，星星是美丽的。 </p>
+        <p style="width:100%;text-align:end;color:rgba(255,255,255,0.60);font-size: 90%;padding:0 30px 20px 0;"> ——
+            埃克苏佩里 《小王子》 </p>
+        <p class="season-btn" onclick="changeSeason(1)">春</p>
+        <p class="season-btn" onclick="changeSeason(2)">夏</p>
+        <p class="season-btn" onclick="changeSeason(3)">秋</p>
+        <p class="season-btn" onclick="changeSeason(4)">冬</p>
+        <p style="position: absolute;bottom:10px;font-size:80%;padding: 0 30px 0 30px;color: rgba(255,255,255,1.00);">
+            项目地址<a href="https://github.com/xSILENCEx/me.liugl.cn">https://github.com/xSILENCEx/me.liugl.cn</a></p>
     </section>
     <nav id="nav">
         <div id="logo">SILENCE</div>
         <div id="menuBtn">◈</div>
     </nav>
     <section id="centerBody">
+        <div id="s1"></div>
         <section class="section1">
             <div id="headBg"></div>
             <div class="user-box">
@@ -46,7 +52,7 @@
                     我尝试使用Bootstrap栅格系统制作了这个个人简历网站。 我将在这里进行简单的自我介绍并通过这种方式不断进步。</div>
             </div>
         </section>
-        <section class="section2">
+        <section id="s2" class="section2">
             <div class="row" style="max-width: 1400px;margin:0 auto;">
                 <div class="col-sm-3 sp-box">
                     <div class="sp-in def-radius">
@@ -100,7 +106,7 @@
                 </div>
             </div>
         </section>
-        <section class="section4">
+        <section id="s3" class="section4">
             <div class="skill-title">专业技能</div>
             <div class="skill-con">
                 <div class="skill sk3" title="熟练" style="width: 38%;height: 300px;line-height: 300px">JS</div>
@@ -114,7 +120,7 @@
                 <div class="skill sk1" title="熟练" style="width: 38%;height: 100px;line-height: 100px">PPT</div>
             </div>
         </section>
-        <section class="section5">
+        <section id="s4" class="section5">
             <div class="container" style="max-width: 1400px;margin: 0 auto;">
                 <div class="row">
                     <div class="col-sm-6">
@@ -198,7 +204,7 @@
                 </div>
             </div>
         </section>
-        <section class="section6">
+        <section id="s5" class="section6">
             <div class="h-s-title">自我评价</div>
             <div style="max-width: 1400px;margin: 0 auto;padding-left: 15px;padding-right: 15px;">
                 <div id="section7" class="talk-myself">
@@ -208,7 +214,7 @@
                 </div>
             </div>
         </section>
-        <section class="section7">
+        <section id="s6" class="section7">
             <div style="max-width: 1400px;margin: 0 auto;padding: 15px;">
                 <div class="more">
                     <div class="h-s-title">部分美术作品</div>

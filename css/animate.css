@@ -155,3 +155,12 @@ li:hover {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
 }
+
+.season-btn:hover {
+    background-color: rgba(0, 77, 115, 0.80);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
