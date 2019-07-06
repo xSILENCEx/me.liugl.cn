@@ -32,6 +32,10 @@ a:checked {
     color: rgba(255, 255, 255, 0.80);
 }
 
+.link {
+    color: rgba(255, 255, 255, 0.60);
+}
+
 .def {
     margin: 0;
     padding: 0;
