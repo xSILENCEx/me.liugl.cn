@@ -5,10 +5,6 @@
     margin: 0;
 }
 
-body {
-    background-color: rgba(0, 0, 0, 1.00);
-}
-
 a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.80);
@@ -379,14 +375,14 @@ a:checked {
 
 .section5 {
     position: relative;
-    padding: 0 10px 0 10px;
+    padding: 20px 10px 30px 10px;
     background-color: rgba(240, 240, 240, 1.00);
 }
 
 
 .exp {
     height: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-radius: 5px;
     overflow: hidden;
     font-size: 90%;
