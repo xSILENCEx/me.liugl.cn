@@ -645,6 +645,8 @@ li {
 }
 
 .season-btn {
+    user-select: none;
+    cursor: pointer;
     float: left;
     text-align: center;
     width: 105px;
