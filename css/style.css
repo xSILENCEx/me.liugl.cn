@@ -84,7 +84,7 @@ a:checked {
     z-index: 2;
     width: 300px;
     height: 100%;
-    background-color: rgba(103, 54, 50, 1.00);
+    background-color: rgba(32, 110, 125, 1.00);
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -121,23 +121,28 @@ a:checked {
 }
 
 .section1 {
+    overflow: hidden;
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
     position: relative;
+    left: 0;
+    right: 0;
     z-index: -1;
     background-color: rgba(55, 55, 55, 1.00);
-    transform: translateZ(-1px) scale(2.015);
+    transform: translateZ(-1px) scale(2.012);
 }
 
-#headBg {
-    width: 100%;
+.bg {
+    position: absolute;
     height: 100%;
-    background-image: url("/img/Summer.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    width: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
 }
 
 .user-box {
@@ -264,11 +269,13 @@ a:checked {
 }
 
 #eduPic {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
     width: 100%;
     height: 400px;
     background-color: rgba(200, 200, 200, 1.00);
-    background: url("/img/edu-bg-summer.jpg") center center no-repeat;
-    background-size: cover;
 }
 
 .edu-dis {
@@ -307,12 +314,38 @@ a:checked {
 }
 
 .skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     float: left;
     margin: 10px 1% 0 1%;
     border-radius: 8px;
     color: rgba(255, 255, 255, 1.00);
-    font-size: 100%;
+    font-size: 90%;
     text-align: center;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.ico {
+    width: 50%;
+    height: 50%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.skill-text {
+    opacity: 0;
+    position: absolute;
+    font-size: 140%;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.80);
+    font-weight: bold;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;

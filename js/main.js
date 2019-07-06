@@ -61,33 +61,71 @@ function changeSeason(season) {
 }
 
 function changeContent(season) {
-    let headBg = document.getElementById("headBg");
-    let eduBg = document.getElementById("eduPic");
+    let sp = document.getElementById("spring");
+    let su = document.getElementById("summer");
+    let au = document.getElementById("autumn");
+    let wi = document.getElementById("winter");
+
+    let spE = document.getElementById("springEdu");
+    let suE = document.getElementById("summerEdu");
+    let auE = document.getElementById("autumnEdu");
+    let wiE = document.getElementById("winterEdu");
+
     let menu = document.getElementById("menu");
     switch (season) {
         case 0:
-            headBg.style.backgroundImage = 'url("/img/Spring.jpg")';
-            eduBg.style.backgroundImage = 'url("/img/edu-bg-spring.jpg")';
+            sp.style.opacity = "1.00";
+            su.style.opacity = "0.00";
+            au.style.opacity = "0.00";
+            wi.style.opacity = "0.00";
+            spE.style.opacity = "1.00";
+            suE.style.opacity = "0.00";
+            auE.style.opacity = "0.00";
+            wiE.style.opacity = "0.00";
             menu.style.backgroundColor = "rgba(49, 118, 44, 1.00)";
             break;
         case 1:
-            headBg.style.backgroundImage = 'url("/img/Spring.jpg")';
-            eduBg.style.backgroundImage = 'url("/img/edu-bg-spring.jpg")';
+            sp.style.opacity = "1.00";
+            su.style.opacity = "0.00";
+            au.style.opacity = "0.00";
+            wi.style.opacity = "0.00";
+            spE.style.opacity = "1.00";
+            suE.style.opacity = "0.00";
+            auE.style.opacity = "0.00";
+            wiE.style.opacity = "0.00";
             menu.style.backgroundColor = "rgba(49, 118, 44, 1.00)";
             break;
         case 2:
-            headBg.style.backgroundImage = 'url("/img/Summer.jpg")';
-            eduBg.style.backgroundImage = 'url("/img/edu-bg-summer.jpg")';
+            sp.style.opacity = "0.00";
+            su.style.opacity = "1.00";
+            au.style.opacity = "0.00";
+            wi.style.opacity = "0.00";
+            spE.style.opacity = "0.00";
+            suE.style.opacity = "1.00";
+            auE.style.opacity = "0.00";
+            wiE.style.opacity = "0.00";
             menu.style.backgroundColor = "rgba(32, 110, 125, 1.00)";
             break;
         case 3:
-            headBg.style.backgroundImage = 'url("/img/Autumn.jpg")';
-            eduBg.style.backgroundImage = 'url("/img/edu-bg-autumn.jpg")';
+            sp.style.opacity = "0.00";
+            su.style.opacity = "0.00";
+            au.style.opacity = "1.00";
+            wi.style.opacity = "0.00";
+            spE.style.opacity = "0.00";
+            suE.style.opacity = "0.00";
+            auE.style.opacity = "1.00";
+            wiE.style.opacity = "0.00";
             menu.style.backgroundColor = "rgba(95, 55, 31, 1.00)";
             break;
         case 4:
-            headBg.style.backgroundImage = 'url("/img/Winter.jpg")';
-            eduBg.style.backgroundImage = 'url("/img/edu-bg-winter.jpg")';
+            sp.style.opacity = "0.00";
+            su.style.opacity = "0.00";
+            au.style.opacity = "0.00";
+            wi.style.opacity = "1.00";
+            spE.style.opacity = "0.00";
+            suE.style.opacity = "0.00";
+            auE.style.opacity = "0.00";
+            wiE.style.opacity = "1.00";
             menu.style.backgroundColor = "rgba(186, 94, 41, 1.00)";
             break;
     }
