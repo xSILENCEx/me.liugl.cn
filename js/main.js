@@ -1,12 +1,9 @@
 let nowSeason = 2;
-let isMenuOpen = false;
+let flag = document.getElementsByClassName("section1")[0];
+let flagHeight;
 
 window.onload = function (e) {
-    if (checkCookie("season")) {
-        nowSeason = getCookie("season");
-    } else {
-        setCookie("season", nowSeason, 100);
-    }
+    flagHeight = flag.clientHeight;
 
     let d = new Date();
     let m = d.getMonth();
@@ -22,14 +19,19 @@ window.onload = function (e) {
     }
 }
 
+window.onresize = function () {
+    flagHeight = flag.clientHeight;
+}
+
 document.getElementById("centerBody").addEventListener("scroll", function (e) {
     var e = e || window.event;
-    let flag = document.getElementsByClassName("section1")[0];
-    if (this.scrollTop > flag.clientHeight && this.scrollHeight - this.scrollTop - 10 >= flag.clientHeight) {
-        setNavColor(parseInt(nowSeason));
+    if (this.scrollTop >= flagHeight && this.scrollHeight - this.scrollTop - 10 >= flagHeight) {
+        setNavColor(nowSeason);
     } else {
         setNavColor(0);
     }
+
+    e.stopPropagation();
 });
 
 function setNavColor(season) {
@@ -54,7 +56,6 @@ function setNavColor(season) {
 }
 
 function changeSeason(season) {
-    setCookie("season", season, 100);
     nowSeason = season;
     changeContent(nowSeason);
     closeMenu();
@@ -128,32 +129,6 @@ function changeContent(season) {
             wiE.style.opacity = "1.00";
             menu.style.backgroundColor = "rgba(186, 94, 41, 1.00)";
             break;
-    }
-}
-
-function setCookie(cName, cValue, exDays) { //设置cookie
-    var d = new Date();
-    d.setTime(d.getTime() + (exDays * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cName + "=" + cValue + "; " + expires;
-}
-
-function getCookie(cName) { //获取cookie
-    var name = cName + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i].trim();
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
-}
-
-function checkCookie(value) { //检查cookie
-    var v = getCookie(value);
-    if (v != "") {
-        return true;
-    } else {
-        return false;
     }
 }
 
