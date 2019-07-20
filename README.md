@@ -1,3 +1,3 @@
 # me.liugl.cn
 重构的个人网站
-访问http://me.liugl.cn可以查看
+访问 http://me.liugl.cn 可以查看
